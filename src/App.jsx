@@ -2,9 +2,30 @@
 import './styles/main.scss';
 import cristina from './images/Cristina.jpg';
 import portfolio from './images/portfolio1.png';
-import cv from './images/cv.png';
+import ProjectsList from './ProjectsList';
+
 
 function App() {
+const projectsArray = [{
+  title: 'personal portfolio',
+  status: 'in-progress',
+  image: portfolio,
+  summary:'Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.',
+  desc: 'Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.',
+  technologies: 'HTML, SASS,REACT',
+  github: '',
+  demo: '',
+  },{
+  title: 'personal portfolio',
+  status: 'in-progress',
+  image: portfolio,
+  summary:'Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.',
+  desc: 'Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.',
+  technologies: 'HTML, SASS,REACT',
+  github: '',
+  demo: '',
+  }
+  ]
 
   return (
     <>
@@ -52,18 +73,7 @@ function App() {
         </div>
       </section>
 
-      <section className='projects'>
-        <h3 className="projects_title">Prjoects</h3>
-        <div className="project">
-          <figure className='project_figure'>
-            <img src={portfolio} alt="" className='project_figure_img'/>
-          </figure>
-          <div className='porject_containerr'>
-            <h4 className='project_container_title'> PERSONAL PORTFOLIO - in progress</h4>
-            <p className='project_container_text'>Personal portfolio to show my front-end projects and to present myself to anyone who sould liek to know more aboute me and my profesional career.</p>
-           </div>
-        </div>
-      </section>
+      <ProjectsList projectsArray={projectsArray} />
 
 
     </main>
