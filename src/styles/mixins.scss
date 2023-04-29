@@ -1,0 +1,37 @@
+@mixin title_header{
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-right: 1rem;
+    letter-spacing: 1rem;
+    transform: scale(.8, 1)
+}
+
+@mixin title_section {
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 11px;
+    font-size: 3rem;
+    transform: scale(.35, 1);
+    grid-row: 1/2;
+    grid-column: 1/3;
+    font-weight: 400;
+}
+
+
+@mixin text_generic{
+    font-family: 'Roboto',sans-serif;
+    color:white;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+@mixin flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
