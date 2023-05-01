@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 @import './mixins.scss';
 @import './variables.scss';
 
@@ -9,8 +9,17 @@
   font-size: 62.5%;
 }
 
+body,
+html {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  background-color: $gray;
+}
+
 
 .header{
+  scroll-snap-align: start;
   height: 100vh;
   background-color: $gray;
   @include flex_center;
@@ -66,10 +75,18 @@
   }
 }
 
-.body{
-  background-color: $gray;
-
+.construction{
+  font-weight: 400;
+  color: red;
 }
+
+
+// .body{
+//   background-color: $gray;
+// }
+
+// .main{
+// }
 //MENU
 .menu{
   z-index: 20;
@@ -106,6 +123,9 @@
 //ABOUT ME STYLES: 
 
 .aboutMe{
+  padding-top: 4rem;
+  scroll-snap-align: start;
+  height: 100vh;
   @include text_generic;
   background-color:$gray;
   margin: auto;
@@ -113,7 +133,6 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 5fr 5fr;
-  height: 100vh;
   &_title{
     @include title_section;
   }
@@ -139,6 +158,7 @@
         letter-spacing: 1.5px;
         margin-top: 2rem;
         text-align: justify;
+        color: white;
       }
       
   }
@@ -169,6 +189,8 @@
 
 //projects
 .projects{
+  scroll-snap-align: start;
+  padding-top: 4rem;
   background-color: $gray;
   margin: auto;
   max-width: $width-80;
@@ -182,7 +204,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 250px;
       &_item{
-        max-width: 80%;
+        max-width: 90%;
         max-height: 250px;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -204,9 +226,11 @@
             text-transform: capitalize;
             margin-bottom: 1rem;
             text-align: left;
+            color: white;
           }
           &_text{
             font-size: 0.9rem;
+            color: white;
           }
         }
       }
@@ -220,58 +244,6 @@
 }
 
 
-
-
-// .project{
-//     grid-column: 1/2;
-//     grid-row: 2/3;
-//     font-family: 'Roboto', sans-serif;
-//     color: white;
-//     display: grid;
-//     // padding: 2rem 8rem;
-//     grid-template-columns: 1fr 1fr ;
-//     grid-template-rows: 1fr;
-//     font-size: 1rem;
-//     font-weight: 100;
-//     letter-spacing: 1px;
-//     text-align: justify;
-//     justify-content: center;
-//     align-items: center;
-    
-//   &_figure{
-//     width: 19rem;
-//     &_img{
-//       width: 18rem;
-//     }
-//     &_img:hover{
-//       transform: rotate(-0.015turn);
-//       scale: 1.15;
-//     }
-//   }
-//   &_container{
-//     &_title{
-//       margin-bottom: 0.5rem;
-//       font-weight: 400;
-//     }
-//     &_text{line-height: 1.2rem;}
-//   }
-// }
-
-// .project:hover{
-//      transform: translate(-2rem,0);
-//       scale: 1.10;
-//       border: $green solid 1px;
-//       padding: 0 0.5rem;
-//       box-shadow: 5px 5px 10px #000000;
-      
-      
-// }
-
-// .project{
-//   margin: 1rem;
-// }
-
-
 //scrollbar
 
 /* Firefox */
@@ -282,8 +254,7 @@
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
-  width: 12px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -311,3 +282,85 @@
 *::-webkit-scrollbar-thumb:active {
   background-color: $green;
 }
+
+//Footer
+
+.footer{
+  @include text_generic;
+  background-color: $black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size:0.8rem;
+  min-height: 3rem;
+  margin-top: 6rem;
+   &_copy{
+    color: white;
+   }
+   &_name{
+    color: white;
+   }
+}
+
+//contact
+
+.contact{
+  padding-top: 6rem;
+  scroll-snap-align: start;
+  position: relative;
+  &_line1 {
+      position: absolute;
+      width: 2px;
+      background-color: $green;
+      height: 60%;
+      bottom: 0;
+      right: 15%;
+    }
+  &_line2 {
+      position: absolute;
+      bottom: 60%;
+      height: 2px;
+      background-color: $green;
+      width: 35%;
+      right: 15%;
+    }
+  &_title{ 
+    @include title_section;
+    margin-top: 5rem;
+   }
+  &_container{
+    margin: 2rem auto;
+    padding: 0rem 2rem 3rem 3rem;
+    width: 40%;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &_git{
+      &_link{
+        @include text_generic;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        &_icon{
+          width: 2.5rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+    &_mail {
+      &_link {
+        @include text_generic;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        &_icon {
+            width: 2rem;
+            margin-right: 1rem;
+          }
+      }
+    }
+  }
+
+}
+
