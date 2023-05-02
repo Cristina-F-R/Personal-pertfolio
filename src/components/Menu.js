@@ -1,3 +1,5 @@
+import '../styles/menu.scss';
+
 function Menu () {
     return (
       <section className='menu'>

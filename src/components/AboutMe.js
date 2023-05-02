@@ -1,4 +1,5 @@
 import cristina from '../images/Cristina.jpg';
+import '../styles/aboutMe.scss';
 
 function AboutMe (){
     return (

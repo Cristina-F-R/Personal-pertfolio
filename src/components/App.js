@@ -99,8 +99,8 @@ const projectsArray = [{
       <main>
         <Menu/>
         <AboutMe/>
-        <ProjectsList projectsArray={projectsArray} />
-        <Contact/>
+        {/* <ProjectsList projectsArray={projectsArray} />
+        <Contact/> */}
       </main>
       <Footer/>
     </>

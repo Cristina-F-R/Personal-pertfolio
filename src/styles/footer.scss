@@ -1,0 +1,21 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+.footer {
+    @include text_generic;
+    background-color: $black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8rem;
+    height: 4rem;
+    margin-top: 6rem;
+
+    &_copy {
+        color: white;
+    }
+
+    &_name {
+        color: white;
+    }
+}

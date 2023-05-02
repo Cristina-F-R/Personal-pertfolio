@@ -1,0 +1,83 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+.contact {
+    margin-top: 6rem;
+    scroll-snap-align: start;
+    position: relative;
+
+    &_line1 {
+        position: absolute;
+        width: 2px;
+        background-color: $green;
+        height: 90%;
+        bottom: 0;
+        right: 15%;
+    }
+
+    &_line2 {
+        position: absolute;
+        bottom: 90%;
+        height: 2px;
+        background-color: $green;
+        width: 35%;
+        right: 15%;
+    }
+
+    &_title {
+        @include title_section;
+        margin-top: 5rem;
+    }
+
+    &_container {
+        margin: 2rem auto;
+        padding: 0% 2% 2% 5%;
+        width: 30%;
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &_git {
+            &_link {
+                @include text_generic;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &_icon {
+                    width: 2.5rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        &_mail {
+            &_link {
+                @include text_generic;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &_icon {
+                    width: 2rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        &_linkedin {
+            &_link {
+                @include text_generic;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &_icon {
+                    width: 2.5rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+}

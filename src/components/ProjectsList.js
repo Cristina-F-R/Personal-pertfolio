@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
-import '../styles/main.scss';
-import '../styles/App.scss';
+import '../styles/projects.scss';
 
 
 function ProjectsList ({projectsArray}){

@@ -1,0 +1,122 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+        .header {
+            height: 100vh;
+            background-color: $gray;
+            @include flex_center;
+            font-family: $font-generic;
+            position: relative;
+    
+            &_line1 {
+                background-color: $green;
+                height: 2px;
+                width: 90%;
+                position: absolute;
+                top: 10%;
+            }
+    
+    
+            &_line2 {
+                background-color: $green;
+                width: 2px;
+                position: absolute;
+                top: 10%;
+                right: 5%;
+                height: 80%;
+            }
+    
+            &_container {
+                width: 80vw;
+                height: 70vh;
+                background-color: $black;
+                @include flex_center;
+                flex-direction: column;
+                flex-wrap: wrap;
+    
+                &_titles {
+                    min-width: 100%;
+                    @include flex_center;
+                    flex-wrap: wrap;
+    
+                    &_title {
+                        @include title_header;
+                        font-size: 2rem;
+                        color: white;
+                    }
+    
+                    &_title2 {
+                        color: $green;
+                        @include title_header;
+                        font-size: 2rem;
+                    }
+                }
+    
+                &_subtitle {
+                    @include title_section;
+                    text-align: center;
+                    margin-top: 2rem;
+                    color: white;
+                    display: block;
+                    font-weight: 100;
+                    font-size: 2rem;
+                }
+            }
+        }
+    
+        .construction {
+            font-weight: 400;
+            color: red;
+        }
+
+@media (min-width: 768px) {
+    .header {
+        scroll-snap-align: start;
+        &_container {
+            &_titles {
+                &_title {
+                    font-size: 2.4rem;
+                }
+                &_title2 {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &_subtitle {
+                margin-top: 2rem;
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+.header {
+
+        &_container {
+  
+            &_titles {
+ 
+                &_title {
+                    @include title_header;
+                }
+
+                &_title2 {
+                    @include title_header;
+                }
+            }
+
+            &_subtitle {
+                @include title_section;
+                margin-top: 3rem;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .construction {
+        font-weight: 400;
+        color: red;
+    }
+
+}

@@ -1,0 +1,46 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+.menu {
+    display: none;
+}
+
+
+@media(min-width: 768px){
+.menu {
+        z-index: 20;
+        position: sticky;
+        top: 0;
+        height: 4rem;
+        background-color: $gray;
+        padding: 0 2rem;
+        display: block;
+
+        &_nav {
+            @include text_generic;
+
+            &_list {
+                letter-spacing: normal;
+                font-size: 1.3rem;
+                display: flex;
+                list-style: none;
+
+                &_item {
+                    margin: 1rem;
+                    text-decoration: none;
+                }
+
+                &_item:hover {
+                    color: $green;
+                    position: relative;
+                    top: -5px;
+                }
+
+                & a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+}

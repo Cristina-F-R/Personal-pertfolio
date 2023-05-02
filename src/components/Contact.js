@@ -1,5 +1,6 @@
 import github from '../images/github.png';
 import mail from '../images/mail.png';
+import linkedin from '../images/linkedin.png';
 
 function Contact () {
     return(
@@ -13,8 +14,13 @@ function Contact () {
                      <img src={github} alt="icono github" className='contact_container_git_link_icon'/>
                      Visit my GitHub!</a>
                 </div>
+                <div className="contact_container_linkedin">
+                    <a href="https://github.com/Cristina-F-R" className='contact_container_linkedin_link' target="_blank" rel="noreferrer"> 
+                     <img src={linkedin} alt="icono github" className='contact_container_linkedin_link_icon'/>
+                     Visit my Linkedin!</a>
+                </div>
                 <div className="contact_container_mail">
-                    <a href="mailto:cristina.faixedas@gmail.com" className="contact_container_mail_link">
+                    <a href="https://www.linkedin.com/in/cristina-faixedas-roca" className="contact_container_mail_link">
                         <img src={mail} alt="icono mail" className='contact_container_mail_link_icon'/>
                         Send me an email: cristina.faixedas@gmail.com
                     </a>
